@@ -13,6 +13,8 @@ def main():
     reader = csv.reader(infile, delimiter=',')
     next(reader)
     
+    #if statement is working, need to clean up the logic in the else block
+    #day counter only works on the first month, the rest of the months are less by one day 
 
     for record in reader:
         if int(record[0]) == month_counter:
@@ -20,7 +22,7 @@ def main():
             day_counter +=1
         else:
             #print(running_total)
-            #print(day_counter)
+            print(day_counter)
             month_avg = running_total / day_counter
             print(month_avg)
             avg[a][1] = month_avg
